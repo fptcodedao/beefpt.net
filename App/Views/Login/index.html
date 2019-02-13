@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<div class="breadcrumb-area bg-3 text-center">
+    <div class="container">
+        <h1>Login</h1>
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Login</li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="my-account-area ptb-110">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <form action="#">
+                    <div class="form-fields">
+                        <h2>Login</h2>
+                        <p>
+                            <label for="login-name" class="important">Email</label>
+                            <input type="text" id="login-name">
+                        </p>
+                        <p>
+                            <label for="login-pass" class="important">Password</label>
+                            <input type="password" id="login-pass">
+                        </p>
+                        <div id="result"></div>
+                    </div>
+                    <div class="form-action">
+                        <p class="lost_password"><a href="#">Lost your password?</a></p>
+                        <button type="button" id="submit">Login</button>
+                        <label><input id="remem" type="checkbox" name="remem">Remember me</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+       $('#submit').on('click', function () {
+         var user = $('#login-name').val();
+         var pass = $('#login-pass').val();
+         var remem = $('input[name=\'remem\']').is(':checked');
+         console.log(user,pass);
+         $.ajax({
+             url: window.location.href+'/create',
+             method: 'post',
+             data:{
+                 user: user,
+                 pass: pass,
+                 remem: remem
+             },
+             success: function (data) {
+                 $('#result').html(data)
+             }
+         })
+       });
+    });
+</script>
+
+{% endblock %}

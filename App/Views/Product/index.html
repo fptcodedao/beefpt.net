@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}San Pham{% endblock %}
+{% block body %}
+<div class="breadcrumb-area bg-3 text-center">
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product</li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- Shop Area Start -->
+<div class="shop-area shop-full-width ptb-110">
+    <div class="container-medium">
+        <div class="ht-product-tab">
+            <div class="ht-tab-content">
+                <div class="nav" role="tablist">
+                    <a class="active grid" href="#grid" data-toggle="tab" role="tab" aria-selected="true" aria-controls="grid"><i class="fa fa-th"></i></a>
+                    <a class="list" href="#list" data-toggle="tab" role="tab" aria-selected="false" aria-controls="list"><i class="fa fa-list"></i></a>
+                </div>
+                <div class="shop-items">
+                    <span>Showing 1–9 of 53 results</span>
+                </div>
+                <div class="shop-results"><span>Sort By :</span>
+                    <div class="shop-select">
+                        <select name="number">
+                            <option onclick="Sort('default')">Default sorting</option>
+                            <option onclick="Sort('asc')">Sort By Popularity</option>
+                            <option onclick="Sort('pricea')">Sort By Price Low to Hight</option>
+                            <option onclick="Sort('priced')">Sort By Price Hight to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="ht-product-shop tab-content fix">
+            <div class="tab-pane active show fade" id="grid" role="tabpanel">
+                <div class="row">
+                	{% for product in products %}
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="/product/{{product.id}}/show">
+										{% if product.oil_price > 0 %}
+                                       <span class="onsale">Sale!</span>
+                                       {%endif%}
+                                       <img src="{{product.images}}" alt="{{product.name}}">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="/product/{{product.id}}/show">{{product.name}}</a></h5>
+                                    <div class="pro-price">
+                                    	{% if product.oil_price > 0 %}
+                                        <span class="old-price">{{product.oil_price}}</span>
+                                        {%endif%}
+                                        <span class="new-price">{{product.sell_price|number_format}} VND</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="tab-pane fade" id="list" role="tabpanel">
+            	{% for product in products %}
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="/product/{{product.id}}/show">
+							{% if product.oil_price > 0 %}
+                            <span class="onsale">Sale!</span>
+                            {%endif%}
+                            <img src="{{product.images}}" alt="{{product.name}}">
+                        </a>
+                    </div>
+                    <div class="product-text">
+                        <h5><a href="/product/{{product.id}}/show">{{product.name}}</a></h5>
+                        <div class="pro-price">
+                        	{% if product.oil_price > 0 %}
+                            <span class="old-price">{{product.oil_price}}</span>
+                            {%endif%}
+                            <span class="new-price">
+                            {{product.sell_price|number_format}}</span>
+                        </div>
+                        <p>{{product.detail}}</p>
+                        <div class="all-btn-wrap">
+                            <a href="cart.html" data-toggle="tooltip" title="Add to cart">+ Add to cart</a>
+                            <ul class="product-hover">
+                                <li>
+                                    <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                </li>
+                                <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                    <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="pagination-wrapper">
+            <nav aria-label="navigation">
+                <ul class="pagination">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- QUICKVIEW PRODUCT -->
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+            <div class="quick-view-container">
+                <div class="column-left">
+                    <div class="tab-content product-details-large" id="myTabContent">
+                        <div class="tab-pane fade show active" id="single-slide1" role="tabpanel" aria-labelledby="single-slide-tab-1">
+                            <div class="single-product-img">
+                                <img src="assets/img/product/view/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="single-slide2" role="tabpanel" aria-labelledby="single-slide-tab-2">
+                            <div class="single-product-img">
+                                <img src="assets/img/product/view/2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="single-slide3" role="tabpanel" aria-labelledby="single-slide-tab-3">
+                            <div class="single-product-img">
+                                <img src="assets/img/product/view/3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="single-slide4" role="tabpanel" aria-labelledby="single-slide-tab-4">
+                            <div class="single-product-img">
+                                <img src="assets/img/product/view/4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="single-slide5" role="tabpanel" aria-labelledby="single-slide-tab-5">
+                            <div class="single-product-img">
+                                <img src="assets/img/product/view/5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="single-slide6" role="tabpanel" aria-labelledby="single-slide-tab-6">
+                            <div class="single-product-img">
+                                <img src="assets/img/product/view/6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-product-menu">
+                        <div class="nav single-slide-menu" role="tablist">
+                            <div class="single-tab-menu">
+                                <a class="active" data-toggle="tab" id="single-slide-tab-1" href="#single-slide1"><img src="assets/img/product/view/s-1.jpg" alt=""></a>
+                            </div>
+                            <div class="single-tab-menu">
+                                <a data-toggle="tab" id="single-slide-tab-2" href="#single-slide2"><img src="assets/img/product/view/s-2.jpg" alt=""></a>
+                            </div>
+                            <div class="single-tab-menu">
+                                <a data-toggle="tab" id="single-slide-tab-3" href="#single-slide3"><img src="assets/img/product/view/s-3.jpg" alt=""></a>
+                            </div>
+                            <div class="single-tab-menu">
+                                <a data-toggle="tab" id="single-slide-tab-4" href="#single-slide4"><img src="assets/img/product/view/s-4.jpg" alt=""></a>
+                            </div>
+                            <div class="single-tab-menu">
+                                <a data-toggle="tab" id="single-slide-tab-5" href="#single-slide5"><img src="assets/img/product/view/s-5.jpg" alt=""></a>
+                            </div>
+                            <div class="single-tab-menu">
+                                <a data-toggle="tab" id="single-slide-tab-6" href="#single-slide6"><img src="assets/img/product/view/s-6.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-right">
+                    <div class="quick-view-text">
+                        <h2>Curabitur a purus</h2>
+                        <h3 class="q-product-price">$115.00</h3>
+                        <a href="product-details.html">See all features</a>
+                        <span>200 in stock</span>
+                        <div class="input-cart">
+                            <input value="1" type="number">
+                            <button>Add to cart</button>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus</p>
+                        <div class="share-product">
+                            <h4>Share this product</h4>
+                            <div class="social-link">
+                                <a href="#" target="_blank" class="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" target="_blank" class="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" target="_blank" class="instagram">
+                                    <i class="fa fa-pinterest"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a href="#" target="_blank" class="linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/product.js" type="text/javascript"></script>
+<!-- END QUICKVIEW PRODUCT -->
+<!-- Shop Area End -->
+{% endblock %}

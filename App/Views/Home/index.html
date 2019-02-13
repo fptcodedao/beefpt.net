@@ -1,0 +1,1888 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    <div class="slider-area">
+    <div id="slider">
+        {% for slider in slider %}
+            <img src="{{slider.images_url}}" alt="{{slider.sort_desc}}" title="#slide{{slider.id}}" />
+        {% endfor %}
+    </div>
+    {% for slider in slider %}
+    <div class="nivo-html-caption" id="slide{{slider.id}}" >
+        <div class="slider-progress"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-0 col-lg-8 offset-lg-1">
+                    <div class="slider-text slide-two text-left">
+                        <h1 class="wow zoomIn" data-wow-delay=".9s">{{slider.sort_desc}}</h1>
+                        <p class="wow fadeIn" data-wow-delay="1.3s">{{slider.detail}}</p>
+                        <div class="slider-btn-wrapper">
+                            <div class="slider-btn">
+                                <a href="{{slider.url}}">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- Slider Area End -->
+<!-- Product Area Start -->
+<div class="product-area ptb-110">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Our Products</h3>
+            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product-tab-list nav d-flex justify-content-center" role="tablist">
+            <a class="active" href="#tab1" data-toggle="tab" role="tab" aria-selected="true" aria-controls="tab1">Converse</a>
+            <a href="#tab2" data-toggle="tab" role="tab" aria-selected="false" aria-controls="tab2">Vans</a>
+            <a href="#tab3" data-toggle="tab" role="tab" aria-selected="false" aria-controls="tab3">Adidas</a>
+            <a href="#tab4" data-toggle="tab" role="tab" aria-selected="false" aria-controls="tab4">Nike</a>
+        </div>
+        <div class="custom-row">
+            <div class="tab-content">
+                <div class="tab-pane active show fade" id="tab1" role="tabpanel">
+                    <div class="product-carousel owl-carousel carousel-style-one carousel-style-dot">
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <span class="onsale">Sale!</span>
+                                        <img src="assets/img/product/7.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+<!--                                    <div class="timer">-->
+<!--                                        <div data-countdown="2022/01/01" class="timer-grid"></div>-->
+<!--                                    </div>-->
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$45.00</span>
+                                        <span class="new-price">$40.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab2" role="tabpanel">
+                    <div class="product-carousel owl-carousel carousel-style-one carousel-style-dot">
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <span class="onsale">Sale!</span>
+                                        <img src="assets/img/product/4.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                    <div class="timer">
+                                        <div data-countdown="2022/01/01" class="timer-grid"></div>
+                                    </div>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Discount T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$90.00</span>
+                                        <span class="new-price">$80.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/5.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$45.00</span>
+                                        <span class="new-price">$40.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/6.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Fashion Wear</a></h5>
+                                    <div class="pro-price">
+                                        <span>$115.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/1.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Winter T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$100.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/3.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/14.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Fashion Wear</a></h5>
+                                    <div class="pro-price">
+                                        <span>$150.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/17.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Winter T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$100.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/18.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$90.00</span>
+                                        <span class="new-price">$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/19.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Discount Watch</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab3" role="tabpanel">
+                    <div class="product-carousel owl-carousel carousel-style-one carousel-style-dot">
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/20.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Watch</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/21.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                    <div class="timer">
+                                        <div data-countdown="2022/01/01" class="timer-grid"></div>
+                                    </div>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/1.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$45.00</span>
+                                        <span class="new-price">$40.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/18.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$50.00</span>
+                                        <span class="new-price">$30.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <span class="onsale">Sale!</span>
+                                        <img src="assets/img/product/2.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Discount T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$90.00</span>
+                                        <span class="new-price">$80.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/3.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/1.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Winter T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$100.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/17.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Sunglass</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/16.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Watch</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab4" role="tabpanel">
+                    <div class="product-carousel owl-carousel carousel-style-one carousel-style-dot">
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/17.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Sunglass</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/16.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Watch</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <span class="onsale">Sale!</span>
+                                        <img src="assets/img/product/4.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                    <div class="timer">
+                                        <div data-countdown="2022/01/01" class="timer-grid"></div>
+                                    </div>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Discount T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$90.00</span>
+                                        <span class="new-price">$80.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/5.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$45.00</span>
+                                        <span class="new-price">$40.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/15.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/14.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/6.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Fashion Wear</a></h5>
+                                    <div class="pro-price">
+                                        <span>$115.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/1.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Winter T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$100.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/3.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product Area End -->
+<!-- Banner Two Area Start -->
+<div class="banner-area pb-110">
+    <div class="container">
+        <div class="row custom-margin--10">
+            {% for cates in caterich %}
+            <div class="col-lg-6 col-md-6 custom-padding-10">
+                <div class="banner-image-wrap">
+                    <a href="shop.html" class="banner-image"><img src="{{cates.images}}" alt=""></a>
+                    <div class="banner-hover-text">
+                        <h5><a href="shop.html">{{cates.name}}</a></h5>
+                        <span>{{cates.short_desc}}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-6 col-md-6 custom-padding-10">
+                <div class="row custom-margin--10">
+                    {% for cates in categories %}
+                    <div class="col-lg-6 col-md-6 custom-padding-10 mb-20">
+                        <div class="banner-image-wrap">
+                            <a href="shop.html" class="banner-image"><img src="{{cates.images}}" alt=""></a>
+                            <div class="banner-hover-text">
+                                <h5><a href="shop.html">{{cates.name}}</a></h5>
+                                <span>{{cates.short_desc}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Two Area End -->
+<!-- Featured Latest Product Area Start -->
+<div class="featured-latest-product-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="subtitle">
+                    <h3>Latest Arrivals</h3>
+                </div>
+                <div class="row">
+                    <div class="product-carousel-2 owl-carousel carousel-style-dot-2">
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/17.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Sunglass</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/16.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Watch</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <span class="onsale">Sale!</span>
+                                        <img src="assets/img/product/13.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Discount T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$90.00</span>
+                                        <span class="new-price">$80.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/12.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$45.00</span>
+                                        <span class="new-price">$40.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/11.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/10.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/9.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Fashion Wear</a></h5>
+                                    <div class="pro-price">
+                                        <span>$115.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/8.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Winter T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$100.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/7.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="subtitle">
+                    <h3>Featured Products</h3>
+                </div>
+                <div class="row">
+                    <div class="product-carousel-2 owl-carousel carousel-style-dot-2">
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/19.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/21.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Shoes</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/14.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Fashion Wear</a></h5>
+                                    <div class="pro-price">
+                                        <span>$115.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/15.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Branded Sunglass</a></h5>
+                                    <div class="pro-price">
+                                        <span>$300.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/18.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">New Watch</a></h5>
+                                    <div class="pro-price">
+                                        <span>$170.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <span class="onsale">Sale!</span>
+                                        <img src="assets/img/product/20.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Discount T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$90.00</span>
+                                        <span class="new-price">$80.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/12.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer Fashion</a></h5>
+                                    <div class="pro-price">
+                                        <span class="old-price">$45.00</span>
+                                        <span class="new-price">$40.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/18.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Winter T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$100.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-col">
+                            <div class="single-product-item">
+                                <div class="product-image">
+                                    <a href="shop.html">
+                                        <img src="assets/img/product/7.jpg" alt="">
+                                    </a>
+                                    <ul class="product-hover">
+                                        <li>
+                                            <a href="wishlist.html" data-toggle="tooltip" data-placement="left" title="Add to Wishlist" ><i class="ion-android-favorite-outline"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to compare" ><i class="icon ion-android-options"></i></a>
+                                        </li>
+                                        <li class="btn-quickview modal-view" data-toggle="modal" data-target="#productModal">
+                                            <span data-toggle="tooltip" data-placement="left" title="Quick View"><i class="icon ion-android-open"></i></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-text">
+                                    <h5><a href="shop.html">Summer T-shirt</a></h5>
+                                    <div class="pro-price">
+                                        <span>$60.00</span>
+                                    </div>
+                                    <div class="cart-btn-wrap">
+                                        <a href="cart.html" data-toggle="tooltip" data-placement="top" title="Add to cart">+ Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featured Latest Product Area End -->
+<!-- Banner Two Area Start -->
+<div class="banner-two-area pb-110 fix">
+    <div class="banner-container-2">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <a class="banner-image" href="shop.html"><img src="assets/img/banner/4.jpg" alt=""></a>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <a class="banner-image" href="shop.html"><img src="assets/img/banner/5.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Small Product Blog Area Start -->
+<div class="small-product-blog-area pb-110">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="subtitle">
+                            <h3>Top Rated</h3>
+                        </div>
+                        <div class="small-product-carousel owl-carousel carousel-style-dot-2">
+                            <div class="small-product-wrapper">
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/12.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Fashion Shoes</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$100.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/13.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Casual Shoes</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="old-price">$68.00</span>
+                                            <span class="new-price">$65.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/14.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Fashion Wears</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$55.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-product-wrapper">
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/9.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Fashionable Bag</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$100.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/16.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Summer Shoes</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="old-price">$68.00</span>
+                                            <span class="new-price">$65.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/17.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Winter Sunglass</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$55.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="subtitle">
+                            <h3>On Sale</h3>
+                        </div>
+                        <div class="small-product-carousel owl-carousel carousel-style-dot-2">
+                            <div class="small-product-wrapper">
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/21.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Discount Shoes</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="old-price">$68.00</span>
+                                            <span class="new-price">$65.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/20.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Wrist Watch</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$100.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/19.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Branded Watch</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$55.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-product-wrapper">
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/18.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Fashion Wear</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$100.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/11.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Discount Bag</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="old-price">$68.00</span>
+                                            <span class="new-price">$65.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-small-product">
+                                    <div class="s-product-img">
+                                        <a href="shop.html"><img src="assets/img/product/2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-text">
+                                        <h5><a href="shop.html">Summer T-Shirt</a></h5>
+                                        <div class="rating">
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#" class="yellow"><i class="ion-ios-star"></i></a>
+                                            <a href="#"><i class="ion-ios-star"></i></a>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span>$55.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-12 blog-container">
+                <div class="subtitle">
+                    <h3>From Our Blog</h3>
+                </div>
+                <div class="blog-carousel owl-carousel carousel-style-dot-2">
+                    <div class="blog-item-wrapper">
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/blog/1.jpg" alt="">
+                                    <span>Mar<span>10</span></span>
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="blog-details.html">Blog image post</a></h3>
+                                <div class="blog-post-info">
+                                    <span>By</span>
+                                    <a href="#">admin,</a>
+                                    <a href="blog-details.html">3 comments</a>
+                                </div>
+                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero</p>
+                                <a href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/blog/2.jpg" alt="">
+                                    <span>Dec<span>01</span></span>
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="blog-details.html">Post with Gallery</a></h3>
+                                <div class="blog-post-info">
+                                    <span>By</span>
+                                    <a href="#">admin,</a>
+                                    <a href="blog-details.html">3 comments</a>
+                                </div>
+                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero</p>
+                                <a href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-item-wrapper">
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/blog/3.jpg" alt="">
+                                    <span>Aug<span>16</span></span>
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="blog-details.html">Post with Audio</a></h3>
+                                <div class="blog-post-info">
+                                    <span>By</span>
+                                    <a href="#">admin,</a>
+                                    <a href="blog-details.html">10 comments</a>
+                                </div>
+                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero</p>
+                                <a href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/blog/4.jpg" alt="">
+                                    <span>Oct<span>22</span></span>
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="blog-details.html">Post with Video</a></h3>
+                                <div class="blog-post-info">
+                                    <span>By</span>
+                                    <a href="#">admin,</a>
+                                    <a href="blog-details.html">17 comments</a>
+                                </div>
+                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero</p>
+                                <a href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-item-wrapper">
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/blog/5.jpg" alt="">
+                                    <span>Apr<span>10</span></span>
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="blog-details.html">Fashion Event's</a></h3>
+                                <div class="blog-post-info">
+                                    <span>By</span>
+                                    <a href="#">admin,</a>
+                                    <a href="blog-details.html">22 comments</a>
+                                </div>
+                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero</p>
+                                <a href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                        <div class="single-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/blog/6.jpg" alt="">
+                                    <span>Dec<span>01</span></span>
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h3><a href="blog-details.html">Summer Styles</a></h3>
+                                <div class="blog-post-info">
+                                    <span>By</span>
+                                    <a href="#">admin,</a>
+                                    <a href="blog-details.html">70 comments</a>
+                                </div>
+                                <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean posuere libero</p>
+                                <a href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Small Product Blog Area End -->
+
+{% endblock %}

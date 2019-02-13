@@ -1,0 +1,11 @@
+# Remove the question mark from the request but maintain the query string
+RewriteEngine On
+
+# Uncomment the following line if your public folder isn't the web server's root
+# RewriteBase /
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^phpmvc.vn$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.phpmvc.vn$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
